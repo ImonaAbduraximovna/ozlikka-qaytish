@@ -2708,7 +2708,7 @@ body.tungi {
         radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(255, 215, 100, 0.07) 0%, transparent 45%),
         radial-gradient(circle at 10% 90%, rgba(212, 184, 115, 0.05) 0%, transparent 40%),
-        linear-gradient(135deg, #0A0612 0%, #150A1E 50%, #0F0A18 100%) !important;
+        linear-gradient(135deg, #0A1628 0%, #0D1B2E 50%, #0A1828 100%) !important;
     color: #E8DDC7;
 }
 
@@ -2744,7 +2744,7 @@ body.tungi .tavsif {
     background: 
         radial-gradient(circle at 30% 50%, rgba(255, 215, 100, 0.06) 0%, transparent 50%),
         radial-gradient(circle at 70% 30%, rgba(180, 130, 200, 0.04) 0%, transparent 40%),
-        linear-gradient(135deg, #120A1F 0%, #1A0D2A 100%) !important;
+        linear-gradient(135deg, #0F1B30 0%, #122340 100% ) !important;
     position: relative;
     overflow: hidden;
 }
@@ -2753,27 +2753,27 @@ body.tungi .kimlar-uchun {
     background: 
         radial-gradient(circle at 80% 20%, rgba(255, 215, 100, 0.05) 0%, transparent 40%),
         radial-gradient(circle at 20% 80%, rgba(212, 184, 115, 0.04) 0%, transparent 45%),
-        linear-gradient(135deg, #0E0A1A 0%, #150A24 100%) !important;
+        linear-gradient(135deg, #0D1A2C 0%, #112236 100%) !important;
 }
 
 body.tungi .dastur {
     background: 
         radial-gradient(circle at 50% 30%, rgba(255, 215, 100, 0.07) 0%, transparent 45%),
         radial-gradient(circle at 20% 70%, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
-        linear-gradient(135deg, #100A1E 0%, #18102B 100%) !important;
+        linear-gradient(135deg, #0E1C30 0%, #14253E 100%) !important;
 }
 
 body.tungi .master-bolim {
     background: 
         radial-gradient(circle at 30% 40%, rgba(255, 215, 100, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 70% 60%, rgba(212, 184, 115, 0.07) 0%, transparent 45%),
-        linear-gradient(135deg, #0E0A1A 0%, #16102A 100%) !important;
+        linear-gradient(135deg, #0D1A2C 0%, #142540 100%) !important;
 }
 
 body.tungi .kun-dastur {
     background: 
         radial-gradient(circle at 50% 50%, rgba(255, 215, 100, 0.05) 0%, transparent 60%),
-        linear-gradient(135deg, #08050F 0%, #100817 100%) !important;
+        linear-gradient(135deg, #08121E 0%, #0C1A2A 100%) !important;
 }
 
 body.tungi .taymer-bolim {
@@ -2805,7 +2805,7 @@ body.tungi .bonuslar {
     background: 
         radial-gradient(circle at 30% 30%, rgba(255, 215, 100, 0.06) 0%, transparent 45%),
         radial-gradient(circle at 70% 70%, rgba(180, 130, 200, 0.05) 0%, transparent 45%),
-        linear-gradient(135deg, #120A1F 0%, #1C1030 100%) !important;
+        linear-gradient(135deg, #0F1B30 0%, #142845 100%) !important;
 }
 
 body.tungi .sertifikat {
@@ -2817,7 +2817,7 @@ body.tungi .sertifikat {
 body.tungi .faq {
     background: 
         radial-gradient(circle at 50% 50%, rgba(255, 215, 100, 0.05) 0%, transparent 50%),
-        linear-gradient(135deg, #120A1F 0%, #1A0D2A 100%) !important;
+        linear-gradient(135deg, #0F1B30 0%, #122340 100%) !important;
 }
 
 body.tungi .forma {
@@ -2908,7 +2908,7 @@ body.tungi .hero-belgilar {
 /* ===== KARTOCHKALAR — Premium glass effekti ===== */
 
 body.tungi .shart-karta {
-    background: rgba(30, 20, 40, 0.5) !important;
+    background: rgba(20, 40, 71, 0.5) !important;
     backdrop-filter: blur(10px);
     border-left-color: var(--oltin) !important;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 215, 100, 0.08);
@@ -2958,7 +2958,7 @@ body.tungi .master-rasm-konteyner {
 }
 
 body.tungi .master-online {
-    background: rgba(20, 13, 35, 0.95) !important;
+    background: rgba(15, 30, 60, 0.95) !important;
     color: #F5E8C7 !important;
     backdrop-filter: blur(10px);
 }
@@ -3026,7 +3026,7 @@ body.tungi .kun-karta p {
 /* ===== TAYMER ===== */
 
 body.tungi .taymer-katak {
-    background: rgba(30, 20, 40, 0.6) !important;
+    background: rgba(20, 40, 71, 0.6) !important;
     backdrop-filter: blur(15px);
     border-color: var(--yorqin-oltin) !important;
     box-shadow: 
@@ -3070,7 +3070,7 @@ body.tungi .natija-item:hover {
 
 body.tungi .natija-item:hover p,
 body.tungi .natija-item:hover i {
-    color: #0A0612 !important;
+    color: #0A1628 !important;
 }
 
 /* ===== SHARHLAR ===== */
@@ -3083,7 +3083,7 @@ body.tungi .sharh-karta {
 }
 
 body.tungi .sharh-karta:hover {
-    background: rgba(40, 25, 55, 0.7) !important;
+    background: rgba(20,rgba(25, 50, 90, 0.7) 40, 71, 0.6) !important;
     border-color: var(--yorqin-oltin) !important;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 215, 100, 0.2);
 }
@@ -3109,7 +3109,7 @@ body.tungi .sharh-muallif {
 body.tungi .narx-karta {
     background: 
         radial-gradient(circle at 50% 0%, rgba(255, 215, 100, 0.1) 0%, transparent 50%),
-        linear-gradient(135deg, #1A0D2A 0%, #0E0A1A 100%) !important;
+        linear-gradient(135deg, #122340 0%, #0D1A2C 100%) !important;
     border-color: var(--yorqin-oltin) !important;
     box-shadow: 
         0 30px 60px rgba(0, 0, 0, 0.6),
@@ -3132,7 +3132,7 @@ body.tungi .bonus-karta {
 }
 
 body.tungi .bonus-karta:hover {
-    background: rgba(40, 25, 55, 0.75) !important;
+    background: rgba(25, 50, 90, 0.75) !important;
     border-color: var(--yorqin-oltin) !important;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 215, 100, 0.25);
 }
@@ -3196,7 +3196,7 @@ body.tungi .lead-forma input:focus {
 /* ===== HERO ===== */
 
 body.tungi .hero-yulduz {
-    background: rgba(30, 20, 40, 0.85) !important;
+    background: rgba(20, 40, 71, 0.85) !important;
     backdrop-filter: blur(10px);
     border-color: var(--yorqin-oltin) !important;
     color: var(--yorqin-oltin) !important;
@@ -3204,7 +3204,7 @@ body.tungi .hero-yulduz {
 
 body.tungi .hero-yulduz-2 {
     background: linear-gradient(135deg, #C9A961 0%, #FFD700 50%, #C9A961 100%) !important;
-    color: #0A0612 !important;
+    color: #0A1628 !important;
 }
 
 body.tungi .hero-rasm-konteyner {
