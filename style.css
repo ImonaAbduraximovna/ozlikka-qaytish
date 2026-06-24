@@ -2637,3 +2637,64 @@ body.tungi .sertifikat strong {
         font-size: 14px;
     }
 }
+/* ========== TEPAGA QAYTISH TUGMASI ========== */
+
+.tepaga-qaytish {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 3px solid var(--oltin);
+    background: linear-gradient(135deg, #C9A961 0%, #D4B873 30%, #FFD700 50%, #D4B873 70%, #A88845 100%);
+    background-size: 200% 200%;
+    animation: tillaTugmaYaltirash 4s ease infinite;
+    color: var(--oq);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(201, 169, 97, 0.5), 0 0 30px rgba(255, 215, 100, 0.3);
+    z-index: 998;
+    
+    /* Boshida ko'rinmaydi */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tepaga-qaytish.korinadi {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.tepaga-qaytish:hover {
+    transform: translateY(-5px) scale(1.1) rotate(-10deg);
+    box-shadow: 0 15px 35px rgba(201, 169, 97, 0.7), 0 0 40px rgba(255, 215, 100, 0.5);
+}
+
+.tepaga-qaytish:active {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Tungi rejim */
+
+body.tungi .tepaga-qaytish {
+    box-shadow: 0 10px 30px rgba(255, 215, 100, 0.4), 0 0 30px rgba(255, 215, 100, 0.3);
+}
+
+/* Mobil */
+
+@media (max-width: 600px) {
+    .tepaga-qaytish {
+        bottom: 20px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+}

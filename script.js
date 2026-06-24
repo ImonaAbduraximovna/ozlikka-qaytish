@@ -376,3 +376,29 @@ tilTugma.addEventListener('click', () => {
         localStorage.setItem('til', 'krill');
     }
 });
+
+// ========== TEPAGA QAYTISH TUGMASI ==========
+
+    const tepagaQaytishTugma = document.getElementById('tepagaQaytish');
+
+    if (tepagaQaytishTugma) {
+        // Scroll qilganda paydo bo'lish
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                tepagaQaytishTugma.classList.add('korinadi');
+            } else {
+                tepagaQaytishTugma.classList.remove('korinadi');
+            }
+        });
+
+        // Bosilganda yuqoriga ko'tarilish
+        tepagaQaytishTugma.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+
+    // ========== HERO RASM PARALLAX ==========
