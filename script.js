@@ -227,3 +227,130 @@ if (heroRasm) {
 console.log('%c✨ КОСМИК ШИФО АКАДЕМИЯСИ ✨', 'color: #C9A961; font-size: 24px; font-weight: bold; font-family: serif;');
 console.log('%c🌟 Ўзликка қайтиш ретрити - 2026 🌟', 'color: #A88845; font-size: 16px; font-style: italic;');
 console.log('%c💛 Сайт яратилди билан муҳаббат 💛', 'color: #D4B873; font-size: 14px;');
+
+// ========== TUNGI REJIM ==========
+
+const rejimTugma = document.getElementById('rejimTugma');
+const rejimIkon = rejimTugma.querySelector('i');
+
+// localStorage'dan o'qish
+const tanlanganRejim = localStorage.getItem('rejim');
+if (tanlanganRejim === 'tungi') {
+    document.body.classList.add('tungi');
+    rejimIkon.classList.remove('fa-moon');
+    rejimIkon.classList.add('fa-sun');
+}
+
+rejimTugma.addEventListener('click', () => {
+    document.body.classList.toggle('tungi');
+    
+    if (document.body.classList.contains('tungi')) {
+        rejimIkon.classList.remove('fa-moon');
+        rejimIkon.classList.add('fa-sun');
+        localStorage.setItem('rejim', 'tungi');
+    } else {
+        rejimIkon.classList.remove('fa-sun');
+        rejimIkon.classList.add('fa-moon');
+        localStorage.setItem('rejim', 'kunduzgi');
+    }
+});
+
+
+// ========== TIL ALMASHTIRISH ==========
+
+const tilTugma = document.getElementById('tilTugma');
+const tilMatn = tilTugma.querySelector('.til-matn');
+
+// Krill → Lotin lug'ati
+const krillLotin = {
+    'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D', 'Е': 'E', 'Ё': 'Yo',
+    'Ж': 'J', 'З': 'Z', 'И': 'I', 'Й': 'Y', 'К': 'K', 'Л': 'L', 'М': 'M',
+    'Н': 'N', 'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T', 'У': 'U',
+    'Ф': 'F', 'Х': 'X', 'Ц': 'Ts', 'Ч': 'Ch', 'Ш': 'Sh', 'Ъ': "'",
+    'Ы': 'I', 'Ь': '', 'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya',
+    'Ў': "O'", 'Қ': 'Q', 'Ғ': "G'", 'Ҳ': 'H',
+    'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo',
+    'ж': 'j', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm',
+    'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+    'ф': 'f', 'х': 'x', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'ъ': "'",
+    'ы': 'i', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya',
+    'ў': "o'", 'қ': 'q', 'ғ': "g'", 'ҳ': 'h'
+};
+
+function krillToLotin(matn) {
+    return matn.split('').map(harf => krillLotin[harf] !== undefined ? krillLotin[harf] : harf).join('');
+}
+
+// Tarjima qilinmasligi kerak (texnik so'zlar)
+const ozgartmaslik = ['EXales', '@', '+998', 'WhatsApp', 'Telegram', 'Email', 'KOSMIK SHIFO', 'PREMIUM', '#', '©'];
+
+function matnniAylantirish(element, lotinga) {
+    // Asl matnni saqlash
+    if (!element.dataset.asl) {
+        element.dataset.asl = element.textContent;
+    }
+    
+    if (lotinga) {
+        element.textContent = krillToLotin(element.dataset.asl);
+    } else {
+        element.textContent = element.dataset.asl;
+    }
+}
+
+function tilniAlmashtirish(lotinga) {
+    // Barcha matn elementlari
+    const elementlar = document.querySelectorAll(
+        'h1, h2, h3, h4, p, span, a, button, li, input[placeholder], div.kun-karta h4, div.bolim-sarlavha, div.bolim-sarlavha-oq'
+    );
+    
+    elementlar.forEach(el => {
+        // Bolalari bo'lmagan elementlar
+        if (el.children.length === 0 && el.textContent.trim()) {
+            const matn = el.textContent.trim();
+            
+            // O'zgartirmaslik kerak bo'lsa
+            if (ozgartmaslik.some(s => matn.includes(s))) {
+                return;
+            }
+            
+            matnniAylantirish(el, lotinga);
+        }
+    });
+    
+    // Placeholder'lar
+    const inputlar = document.querySelectorAll('input[placeholder]');
+    inputlar.forEach(input => {
+        if (!input.dataset.aslPlaceholder) {
+            input.dataset.aslPlaceholder = input.placeholder;
+        }
+        
+        if (lotinga) {
+            input.placeholder = krillToLotin(input.dataset.aslPlaceholder);
+        } else {
+            input.placeholder = input.dataset.aslPlaceholder;
+        }
+    });
+}
+
+// localStorage'dan o'qish
+const tanlanganTil = localStorage.getItem('til');
+if (tanlanganTil === 'lotin') {
+    setTimeout(() => {
+        tilniAlmashtirish(true);
+        tilMatn.textContent = 'КР';
+    }, 100);
+}
+
+tilTugma.addEventListener('click', () => {
+    const hozirgiTil = tilMatn.textContent;
+    
+    if (hozirgiTil === 'UZ') {
+        tilniAlmashtirish(true);
+        tilMatn.textContent = 'КР';
+        localStorage.setItem('til', 'lotin');
+    } else {
+        tilniAlmashtirish(false);
+        tilMatn.textContent = 'UZ';
+        localStorage.setItem('til', 'krill');
+    }
+});

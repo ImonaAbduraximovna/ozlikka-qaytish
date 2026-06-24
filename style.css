@@ -2161,3 +2161,178 @@ footer {
     
     .tugma-tooltip { display: none; }
 }
+
+/* ========== BOSHQARUV TUGMALARI ========== */
+
+.boshqaruv-tugmalari {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.rejim-tugma,
+.til-tugma {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid var(--oltin);
+    background: var(--oq);
+    color: var(--oltin);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 20px rgba(201, 169, 97, 0.3), 0 0 20px rgba(255, 215, 100, 0.15);
+}
+
+.rejim-tugma:hover,
+.til-tugma:hover {
+    transform: scale(1.15) rotate(15deg);
+    box-shadow: 0 10px 25px rgba(201, 169, 97, 0.5), 0 0 30px rgba(255, 215, 100, 0.3);
+    background: var(--oltin);
+    color: var(--oq);
+}
+
+.til-tugma {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* ========== TUNGI REJIM ========== */
+
+body.tungi {
+    --krem: #1A1A1F;
+    --och-krem: #15151A;
+    --oq: #25252D;
+    --tok-jigarrang: #F5E8C7;
+    --kulrang: #A8A39A;
+    --och-kulrang: #2F2F38;
+    --tuman-moviy: #1F2A33;
+    --moviy-matn: #0F1419;
+    --och-moviy: #2A3D45;
+    background: 
+        radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(255, 215, 100, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(212, 184, 115, 0.06) 0%, transparent 60%),
+        #1A1A1F !important;
+}
+
+body.tungi::before {
+    background: radial-gradient(circle, rgba(255, 215, 100, 0.08) 0%, rgba(255, 215, 100, 0.02) 40%, transparent 70%);
+}
+
+body.tungi::after {
+    background: radial-gradient(circle, rgba(212, 184, 115, 0.06) 0%, transparent 70%);
+}
+
+/* Tungi rejimda komponentlar */
+
+body.tungi .hero-sarlavha,
+body.tungi .bolim-sarlavha,
+body.tungi .master-ism,
+body.tungi .dastur-karta h3,
+body.tungi .bonus-karta h4,
+body.tungi .sharh-ism,
+body.tungi .sharh-matn,
+body.tungi .sertifikat h2,
+body.tungi .master-yutuqlar li {
+    color: var(--tok-jigarrang);
+}
+
+body.tungi .hero-tavsif,
+body.tungi .master-tavsif,
+body.tungi .dastur-karta p,
+body.tungi .bonus-karta p,
+body.tungi .tavsif-matn,
+body.tungi .shart-karta p,
+body.tungi .faq-javob p,
+body.tungi .sertifikat p {
+    color: var(--kulrang);
+}
+
+body.tungi .shart-karta,
+body.tungi .dastur-karta,
+body.tungi .bonus-karta,
+body.tungi .sharh-karta,
+body.tungi .taymer-katak,
+body.tungi .natija-item,
+body.tungi .faq-item,
+body.tungi .master-badge {
+    background: var(--oq);
+    border-color: rgba(201, 169, 97, 0.3);
+}
+
+body.tungi .faq-savol {
+    color: var(--tok-jigarrang);
+}
+
+body.tungi .master-rasm-konteyner {
+    border-color: var(--oq);
+}
+
+body.tungi .hero-yulduz {
+    background: var(--oq);
+    border-color: var(--oltin);
+}
+
+body.tungi .master-online {
+    background: rgba(37, 37, 45, 0.95);
+    color: var(--tok-jigarrang);
+}
+
+body.tungi .rejim-tugma,
+body.tungi .til-tugma {
+    background: var(--oq);
+    color: var(--oltin);
+}
+
+body.tungi .rejim-tugma:hover,
+body.tungi .til-tugma:hover {
+    background: var(--oltin);
+    color: var(--oq);
+}
+
+body.tungi .natija-item p {
+    color: var(--tok-jigarrang);
+}
+
+body.tungi .natija-item i {
+    color: var(--oltin);
+}
+
+body.tungi .natija-item:hover p {
+    color: var(--moviy-matn);
+}
+
+body.tungi .raqam,
+body.tungi .kun-raqam {
+    color: var(--oltin);
+}
+
+body.tungi .master-statistika .stat-item:hover {
+    background: rgba(255, 215, 100, 0.05);
+}
+
+/* Mobil */
+
+@media (max-width: 600px) {
+    .boshqaruv-tugmalari {
+        top: 15px;
+        left: 15px;
+        gap: 8px;
+    }
+    
+    .rejim-tugma,
+    .til-tugma {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
