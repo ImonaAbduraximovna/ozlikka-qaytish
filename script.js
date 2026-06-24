@@ -256,7 +256,7 @@ rejimTugma.addEventListener('click', () => {
 });
 
 
-// ========== TIL ALMASHTIRISH ==========
+// ========== TIL ALMASHTIRISH — TO'LIQ ==========
 
 const tilTugma = document.getElementById('tilTugma');
 const tilMatn = tilTugma.querySelector('.til-matn');
@@ -266,56 +266,67 @@ const krillLotin = {
     'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D', 'Е': 'E', 'Ё': 'Yo',
     'Ж': 'J', 'З': 'Z', 'И': 'I', 'Й': 'Y', 'К': 'K', 'Л': 'L', 'М': 'M',
     'Н': 'N', 'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T', 'У': 'U',
-    'Ф': 'F', 'Х': 'X', 'Ц': 'Ts', 'Ч': 'Ch', 'Ш': 'Sh', 'Ъ': "'",
-    'Ы': 'I', 'Ь': '', 'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya',
+    'Ф': 'F', 'Х': 'X', 'Ц': 'Ts', 'Ч': 'Ch', 'Ш': 'Sh', 'Щ': 'Sh',
+    'Ъ': "'", 'Ы': 'I', 'Ь': '', 'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya',
     'Ў': "O'", 'Қ': 'Q', 'Ғ': "G'", 'Ҳ': 'H',
     'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo',
     'ж': 'j', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm',
     'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
-    'ф': 'f', 'х': 'x', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'ъ': "'",
-    'ы': 'i', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya',
+    'ф': 'f', 'х': 'x', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'sh',
+    'ъ': "'", 'ы': 'i', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya',
     'ў': "o'", 'қ': 'q', 'ғ': "g'", 'ҳ': 'h'
 };
 
 function krillToLotin(matn) {
-    return matn.split('').map(harf => krillLotin[harf] !== undefined ? krillLotin[harf] : harf).join('');
+    let natija = '';
+    for (let i = 0; i < matn.length; i++) {
+        const harf = matn[i];
+        natija += krillLotin[harf] !== undefined ? krillLotin[harf] : harf;
+    }
+    return natija;
 }
 
-// Tarjima qilinmasligi kerak (texnik so'zlar)
-const ozgartmaslik = ['EXales', '@', '+998', 'WhatsApp', 'Telegram', 'Email', 'KOSMIK SHIFO', 'PREMIUM', '#', '©'];
+// Saqlanmasligi kerak bo'lgan elementlar (script, style, va h.k)
+const otkazibYuborish = ['SCRIPT', 'STYLE', 'CODE', 'PRE'];
 
-function matnniAylantirish(element, lotinga) {
-    // Asl matnni saqlash
-    if (!element.dataset.asl) {
-        element.dataset.asl = element.textContent;
+function barchaMatnlarniTopish(element, lotinga) {
+    // Agar bu element script/style bo'lsa, o'tkazib yuborish
+    if (otkazibYuborish.includes(element.tagName)) {
+        return;
     }
     
-    if (lotinga) {
-        element.textContent = krillToLotin(element.dataset.asl);
-    } else {
-        element.textContent = element.dataset.asl;
+    // Element bolalarini ko'rib chiqish
+    for (let i = 0; i < element.childNodes.length; i++) {
+        const node = element.childNodes[i];
+        
+        // Agar bu matn tugun bo'lsa (TEXT_NODE)
+        if (node.nodeType === 3) {
+            const matn = node.nodeValue;
+            
+            // Bo'sh joy emas bo'lsa
+            if (matn && matn.trim()) {
+                // Asl matnni saqlash
+                if (!node.aslMatn) {
+                    node.aslMatn = matn;
+                }
+                
+                if (lotinga) {
+                    node.nodeValue = krillToLotin(node.aslMatn);
+                } else {
+                    node.nodeValue = node.aslMatn;
+                }
+            }
+        }
+        // Agar bu element bo'lsa, ichiga kirish
+        else if (node.nodeType === 1) {
+            barchaMatnlarniTopish(node, lotinga);
+        }
     }
 }
 
 function tilniAlmashtirish(lotinga) {
-    // Barcha matn elementlari
-    const elementlar = document.querySelectorAll(
-        'h1, h2, h3, h4, p, span, a, button, li, input[placeholder], div.kun-karta h4, div.bolim-sarlavha, div.bolim-sarlavha-oq'
-    );
-    
-    elementlar.forEach(el => {
-        // Bolalari bo'lmagan elementlar
-        if (el.children.length === 0 && el.textContent.trim()) {
-            const matn = el.textContent.trim();
-            
-            // O'zgartirmaslik kerak bo'lsa
-            if (ozgartmaslik.some(s => matn.includes(s))) {
-                return;
-            }
-            
-            matnniAylantirish(el, lotinga);
-        }
-    });
+    // Body ichidagi barcha matnlar
+    barchaMatnlarniTopish(document.body, lotinga);
     
     // Placeholder'lar
     const inputlar = document.querySelectorAll('input[placeholder]');
@@ -330,6 +341,17 @@ function tilniAlmashtirish(lotinga) {
             input.placeholder = input.dataset.aslPlaceholder;
         }
     });
+    
+    // Title (sahifa nomi)
+    if (!document.body.dataset.aslTitle) {
+        document.body.dataset.aslTitle = document.title;
+    }
+    
+    if (lotinga) {
+        document.title = krillToLotin(document.body.dataset.aslTitle);
+    } else {
+        document.title = document.body.dataset.aslTitle;
+    }
 }
 
 // localStorage'dan o'qish
@@ -338,7 +360,7 @@ if (tanlanganTil === 'lotin') {
     setTimeout(() => {
         tilniAlmashtirish(true);
         tilMatn.textContent = 'КР';
-    }, 100);
+    }, 200);
 }
 
 tilTugma.addEventListener('click', () => {
