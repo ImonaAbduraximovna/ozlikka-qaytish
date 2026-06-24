@@ -2698,3 +2698,606 @@ body.tungi .tepaga-qaytish {
         font-size: 18px;
     }
 }
+
+/* ========== TUNGI REJIM — PREMIUM HASHAMATLI ========== */
+
+body.tungi {
+    background: 
+        radial-gradient(circle at 15% 20%, rgba(255, 215, 100, 0.08) 0%, transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(212, 184, 115, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 215, 100, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 10% 90%, rgba(212, 184, 115, 0.05) 0%, transparent 40%),
+        linear-gradient(135deg, #0A0612 0%, #150A1E 50%, #0F0A18 100%) !important;
+    color: #E8DDC7;
+}
+
+/* Quyosh-oy nurlari fonda */
+
+body.tungi::before {
+    background: radial-gradient(circle, rgba(255, 215, 100, 0.15) 0%, rgba(255, 215, 100, 0.05) 30%, transparent 70%) !important;
+    width: 1000px !important;
+    height: 1000px !important;
+    animation: oyPorlashi 12s ease-in-out infinite !important;
+}
+
+body.tungi::after {
+    background: radial-gradient(circle, rgba(212, 184, 115, 0.12) 0%, transparent 70%) !important;
+    width: 900px !important;
+    height: 900px !important;
+    animation: oyPorlashi-2 15s ease-in-out infinite !important;
+}
+
+@keyframes oyPorlashi {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+    50% { transform: translate(60px, 40px) scale(1.2); opacity: 1; }
+}
+
+@keyframes oyPorlashi-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    50% { transform: translate(-50px, -60px) scale(1.25); opacity: 0.9; }
+}
+
+/* ===== BO'LIMLAR FONI — Royal violet-navy ===== */
+
+body.tungi .tavsif {
+    background: 
+        radial-gradient(circle at 30% 50%, rgba(255, 215, 100, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(180, 130, 200, 0.04) 0%, transparent 40%),
+        linear-gradient(135deg, #120A1F 0%, #1A0D2A 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+body.tungi .kimlar-uchun {
+    background: 
+        radial-gradient(circle at 80% 20%, rgba(255, 215, 100, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(212, 184, 115, 0.04) 0%, transparent 45%),
+        linear-gradient(135deg, #0E0A1A 0%, #150A24 100%) !important;
+}
+
+body.tungi .dastur {
+    background: 
+        radial-gradient(circle at 50% 30%, rgba(255, 215, 100, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 20% 70%, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, #100A1E 0%, #18102B 100%) !important;
+}
+
+body.tungi .master-bolim {
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(255, 215, 100, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(212, 184, 115, 0.07) 0%, transparent 45%),
+        linear-gradient(135deg, #0E0A1A 0%, #16102A 100%) !important;
+}
+
+body.tungi .kun-dastur {
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 100, 0.05) 0%, transparent 60%),
+        linear-gradient(135deg, #08050F 0%, #100817 100%) !important;
+}
+
+body.tungi .taymer-bolim {
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 100, 0.08) 0%, transparent 50%),
+        linear-gradient(135deg, #120A1F 0%, #1A0F2A 100%) !important;
+}
+
+body.tungi .natijalar {
+    background: 
+        radial-gradient(circle at 25% 50%, rgba(255, 215, 100, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 75% 50%, rgba(212, 184, 115, 0.05) 0%, transparent 45%),
+        linear-gradient(135deg, #0E0A1A 0%, #150A24 100%) !important;
+}
+
+body.tungi .sharhlar {
+    background: 
+        radial-gradient(circle at 50% 30%, rgba(255, 215, 100, 0.07) 0%, transparent 50%),
+        linear-gradient(135deg, #120A1F 0%, #1A0D2A 100%) !important;
+}
+
+body.tungi .narx {
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 100, 0.08) 0%, transparent 55%),
+        linear-gradient(135deg, #0E0A1A 0%, #16102A 100%) !important;
+}
+
+body.tungi .bonuslar {
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 215, 100, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 70% 70%, rgba(180, 130, 200, 0.05) 0%, transparent 45%),
+        linear-gradient(135deg, #120A1F 0%, #1C1030 100%) !important;
+}
+
+body.tungi .sertifikat {
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 100, 0.1) 0%, transparent 60%),
+        linear-gradient(135deg, #0E0A1A 0%, #150A24 100%) !important;
+}
+
+body.tungi .faq {
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 100, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, #120A1F 0%, #1A0D2A 100%) !important;
+}
+
+body.tungi .forma {
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 100, 0.08) 0%, transparent 55%),
+        linear-gradient(135deg, #08050F 0%, #100817 100%) !important;
+    color: #F5E8C7;
+}
+
+body.tungi footer {
+    background: linear-gradient(135deg, #08050F 0%, #100817 100%) !important;
+}
+
+/* ===== BOKEH EFFEKTI — yorug'lik nuqtalari ===== */
+
+body.tungi .tavsif::before,
+body.tungi .dastur::before,
+body.tungi .master-bolim::before,
+body.tungi .sharhlar::before,
+body.tungi .narx::before,
+body.tungi .bonuslar::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 215, 100, 0.8) 0%, transparent 70%);
+    box-shadow: 
+        300px 100px 0 -2px rgba(255, 215, 100, 0.5),
+        500px 200px 0 -1px rgba(212, 184, 115, 0.6),
+        800px 50px 0 -3px rgba(255, 215, 100, 0.4),
+        200px 400px 0 -2px rgba(212, 184, 115, 0.5),
+        700px 350px 0 -1px rgba(255, 215, 100, 0.5),
+        100px 250px 0 -3px rgba(255, 215, 100, 0.4),
+        900px 280px 0 -2px rgba(212, 184, 115, 0.5),
+        400px 50px 0 -3px rgba(255, 215, 100, 0.4),
+        600px 480px 0 -1px rgba(255, 215, 100, 0.6);
+    animation: bokehPulse 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes bokehPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+body.tungi .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== SARLAVHALAR ===== */
+
+body.tungi .hero-sarlavha,
+body.tungi .bolim-sarlavha,
+body.tungi .master-ism,
+body.tungi .sertifikat h2 {
+    color: #F5E8C7 !important;
+    text-shadow: 0 2px 20px rgba(255, 215, 100, 0.15);
+}
+
+body.tungi .hero-akademiya,
+body.tungi .master-tegline,
+body.tungi .master-imzo,
+body.tungi .forma-imzo {
+    color: var(--yorqin-oltin) !important;
+    text-shadow: 0 0 20px rgba(255, 215, 100, 0.3);
+}
+
+/* ===== MATNLAR ===== */
+
+body.tungi .hero-tavsif,
+body.tungi .tavsif-matn,
+body.tungi .master-tavsif,
+body.tungi .sertifikat p,
+body.tungi .narx-eslatma,
+body.tungi .forma-tavsif {
+    color: #D4C8A8 !important;
+}
+
+body.tungi .hero-belgilar {
+    color: #B8AC95 !important;
+}
+
+/* ===== KARTOCHKALAR — Premium glass effekti ===== */
+
+body.tungi .shart-karta {
+    background: rgba(30, 20, 40, 0.5) !important;
+    backdrop-filter: blur(10px);
+    border-left-color: var(--oltin) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 215, 100, 0.08);
+}
+
+body.tungi .shart-karta:hover {
+    background: rgba(40, 25, 55, 0.7) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 215, 100, 0.2);
+}
+
+body.tungi .shart-karta p {
+    color: #E8DDC7 !important;
+}
+
+body.tungi .dastur-karta {
+    background: rgba(30, 20, 40, 0.5) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(201, 169, 97, 0.25) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 215, 100, 0.1);
+}
+
+body.tungi .dastur-karta:hover {
+    background: rgba(40, 25, 55, 0.7) !important;
+    border-color: var(--yorqin-oltin) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 215, 100, 0.25);
+}
+
+body.tungi .dastur-karta h3 {
+    color: #F5E8C7 !important;
+}
+
+body.tungi .dastur-karta p {
+    color: #C4B89F !important;
+}
+
+body.tungi .dastur-karta .raqam {
+    color: var(--yorqin-oltin) !important;
+}
+
+/* ===== MASTER BLOKI ===== */
+
+body.tungi .master-rasm-konteyner {
+    border-color: rgba(255, 215, 100, 0.3) !important;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(255, 215, 100, 0.3) !important;
+}
+
+body.tungi .master-online {
+    background: rgba(20, 13, 35, 0.95) !important;
+    color: #F5E8C7 !important;
+    backdrop-filter: blur(10px);
+}
+
+body.tungi .master-badge {
+    background: rgba(30, 20, 40, 0.85) !important;
+    backdrop-filter: blur(15px);
+    border-color: rgba(255, 215, 100, 0.4) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 100, 0.2);
+}
+
+body.tungi .master-badge strong {
+    color: #F5E8C7 !important;
+}
+
+body.tungi .master-badge span {
+    color: #B8AC95 !important;
+}
+
+body.tungi .master-unvon {
+    background: rgba(255, 215, 100, 0.12) !important;
+    color: var(--yorqin-oltin) !important;
+    border: 1px solid rgba(255, 215, 100, 0.3);
+}
+
+body.tungi .master-yutuqlar li {
+    color: #E8DDC7 !important;
+    border-bottom-color: rgba(255, 215, 100, 0.15) !important;
+}
+
+body.tungi .master-statistika {
+    border-top-color: rgba(255, 215, 100, 0.3) !important;
+}
+
+body.tungi .master-statistika .stat-belgi {
+    color: #B8AC95 !important;
+}
+
+body.tungi .master-statistika .stat-item:hover {
+    background: rgba(255, 215, 100, 0.06) !important;
+}
+
+/* ===== 10 KUNLIK DASTUR ===== */
+
+body.tungi .kun-karta {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 215, 100, 0.25) !important;
+}
+
+body.tungi .kun-karta:hover {
+    background: rgba(255, 215, 100, 0.08) !important;
+    border-color: var(--yorqin-oltin) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 215, 100, 0.2);
+}
+
+body.tungi .kun-karta h4 {
+    color: #F5E8C7 !important;
+}
+
+body.tungi .kun-karta p {
+    color: #B8AC95 !important;
+}
+
+/* ===== TAYMER ===== */
+
+body.tungi .taymer-katak {
+    background: rgba(30, 20, 40, 0.6) !important;
+    backdrop-filter: blur(15px);
+    border-color: var(--yorqin-oltin) !important;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(255, 215, 100, 0.2) !important;
+}
+
+body.tungi .taymer-belgi {
+    color: #B8AC95 !important;
+}
+
+body.tungi .taymer-sarlavha {
+    color: #F5E8C7 !important;
+}
+
+body.tungi .taymer-ogohlantirish {
+    color: #E8DDC7 !important;
+}
+
+/* ===== NATIJALAR ===== */
+
+body.tungi .natija-item {
+    background: rgba(30, 20, 40, 0.5) !important;
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 215, 100, 0.25) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.tungi .natija-item p {
+    color: #E8DDC7 !important;
+}
+
+body.tungi .natija-item i {
+    color: var(--yorqin-oltin) !important;
+}
+
+body.tungi .natija-item:hover {
+    background: linear-gradient(135deg, #FFD700, #C9A961) !important;
+    box-shadow: 0 20px 40px rgba(255, 215, 100, 0.4) !important;
+}
+
+body.tungi .natija-item:hover p,
+body.tungi .natija-item:hover i {
+    color: #0A0612 !important;
+}
+
+/* ===== SHARHLAR ===== */
+
+body.tungi .sharh-karta {
+    background: rgba(30, 20, 40, 0.6) !important;
+    backdrop-filter: blur(15px);
+    border-color: rgba(255, 215, 100, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.tungi .sharh-karta:hover {
+    background: rgba(40, 25, 55, 0.7) !important;
+    border-color: var(--yorqin-oltin) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 215, 100, 0.2);
+}
+
+body.tungi .sharh-matn {
+    color: #E8DDC7 !important;
+}
+
+body.tungi .sharh-ism {
+    color: #F5E8C7 !important;
+}
+
+body.tungi .sharh-shahar {
+    color: #B8AC95 !important;
+}
+
+body.tungi .sharh-muallif {
+    border-top-color: rgba(255, 215, 100, 0.15) !important;
+}
+
+/* ===== NARX KARTA ===== */
+
+body.tungi .narx-karta {
+    background: 
+        radial-gradient(circle at 50% 0%, rgba(255, 215, 100, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #1A0D2A 0%, #0E0A1A 100%) !important;
+    border-color: var(--yorqin-oltin) !important;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        0 0 50px rgba(255, 215, 100, 0.3),
+        inset 0 1px 0 rgba(255, 215, 100, 0.1) !important;
+}
+
+body.tungi .narx-tarkib li {
+    color: #E8DDC7 !important;
+    border-bottom-color: rgba(255, 215, 100, 0.2) !important;
+}
+
+/* ===== BONUSLAR ===== */
+
+body.tungi .bonus-karta {
+    background: rgba(30, 20, 40, 0.6) !important;
+    backdrop-filter: blur(15px);
+    border-color: rgba(255, 215, 100, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.tungi .bonus-karta:hover {
+    background: rgba(40, 25, 55, 0.75) !important;
+    border-color: var(--yorqin-oltin) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 215, 100, 0.25);
+}
+
+body.tungi .bonus-karta h4 {
+    color: #F5E8C7 !important;
+}
+
+body.tungi .bonus-karta p {
+    color: #B8AC95 !important;
+}
+
+body.tungi .bonus-narxi {
+    background: rgba(255, 215, 100, 0.15) !important;
+    color: var(--yorqin-oltin) !important;
+    border: 1px solid rgba(255, 215, 100, 0.3);
+}
+
+/* ===== FAQ ===== */
+
+body.tungi .faq-item {
+    background: rgba(30, 20, 40, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 215, 100, 0.25) !important;
+}
+
+body.tungi .faq-item:hover,
+body.tungi .faq-item.faol {
+    background: rgba(40, 25, 55, 0.7) !important;
+    border-color: var(--yorqin-oltin) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 215, 100, 0.2);
+}
+
+body.tungi .faq-savol {
+    color: #F5E8C7 !important;
+}
+
+body.tungi .faq-javob p {
+    color: #B8AC95 !important;
+}
+
+/* ===== FORMA ===== */
+
+body.tungi .lead-forma input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 215, 100, 0.3) !important;
+    color: #F5E8C7 !important;
+}
+
+body.tungi .lead-forma input::placeholder {
+    color: #8A8576 !important;
+}
+
+body.tungi .lead-forma input:focus {
+    border-color: var(--yorqin-oltin) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 0 0 3px rgba(255, 215, 100, 0.15), 0 0 25px rgba(255, 215, 100, 0.3) !important;
+}
+
+/* ===== HERO ===== */
+
+body.tungi .hero-yulduz {
+    background: rgba(30, 20, 40, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border-color: var(--yorqin-oltin) !important;
+    color: var(--yorqin-oltin) !important;
+}
+
+body.tungi .hero-yulduz-2 {
+    background: linear-gradient(135deg, #C9A961 0%, #FFD700 50%, #C9A961 100%) !important;
+    color: #0A0612 !important;
+}
+
+body.tungi .hero-rasm-konteyner {
+    border-color: var(--yorqin-oltin) !important;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        0 0 70px rgba(255, 215, 100, 0.3) !important;
+}
+
+/* ===== TUGMALAR ===== */
+
+body.tungi .boshqaruv-tugmalari .rejim-tugma,
+body.tungi .boshqaruv-tugmalari .til-tugma {
+    background: linear-gradient(135deg, #C9A961 0%, #D4B873 50%, #A88845 100%) !important;
+    border-color: var(--yorqin-oltin) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 100, 0.4) !important;
+}
+
+body.tungi .tepaga-qaytish {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 35px rgba(255, 215, 100, 0.4) !important;
+}
+
+/* ===== SHARTLAR (kimlar uchun) ===== */
+
+body.tungi .shart-karta i {
+    background: rgba(255, 215, 100, 0.15) !important;
+    color: var(--yorqin-oltin) !important;
+}
+
+/* ===== AJRATUVCHI ===== */
+
+body.tungi .ajratuvchi {
+    color: var(--yorqin-oltin) !important;
+}
+
+/* ===== TAVSIF STRONG ===== */
+
+body.tungi .tavsif strong {
+    color: var(--tilla-yorqin) !important;
+}
+
+/* ===== MASTER YUTUQLAR HOVER ===== */
+
+body.tungi .master-yutuqlar li:hover {
+    color: var(--tilla-yorqin) !important;
+}
+
+/* ===== SERTIFIKAT ===== */
+
+body.tungi .sertifikat strong {
+    color: var(--tilla-yorqin) !important;
+}
+
+/* ===== TAVSIF MATN ===== */
+
+body.tungi .tavsif-matn strong {
+    color: var(--tilla-yorqin) !important;
+}
+
+/* ===== HERO TAVSIF ===== */
+
+body.tungi .hero-tavsif strong {
+    color: var(--tilla-yorqin) !important;
+}
+
+/* ===== MASTER TAVSIF ===== */
+
+body.tungi .master-tavsif strong {
+    color: var(--tilla-yorqin) !important;
+}
+
+/* ===== SHART KARTA I HOVER ===== */
+
+body.tungi .shart-karta:hover i {
+    background: rgba(255, 215, 100, 0.25) !important;
+}
+
+/* ===== DASTUR KARTA H3 HOVER ===== */
+
+body.tungi .dastur-karta:hover h3 {
+    color: var(--tilla-yorqin) !important;
+}
+
+/* ===== DASTUR KARTA RAQAM HOVER ===== */
+
+body.tungi .dastur-karta:hover .raqam {
+    color: var(--tilla-yorqin) !important;
+}
+
+/* ===== SHARH BELGI ===== */
+
+body.tungi .sharh-belgi {
+    color: var(--yorqin-oltin) !important;
+    opacity: 0.5;
+}
