@@ -1,22 +1,17 @@
-/* ========== TAYMER ========== */
+// ========== TAYMER ==========
+// Retrit boshlanish sanasi: 18 Iyul 2026
 
-const retritKuni = new Date("2026-07-18T00:00:00").getTime();
+const retritSana = new Date('2026-07-18T00:00:00').getTime();
 
-const kunlarEl = document.getElementById("kunlar");
-const soatlarEl = document.getElementById("soatlar");
-const daqiqalarEl = document.getElementById("daqiqalar");
-const soniyalarEl = document.getElementById("soniyalar");
-
-function taymerniYangilash() {
-
+function taymerYangilash() {
     const hozir = new Date().getTime();
-    const farq = retritKuni - hozir;
+    const farq = retritSana - hozir;
 
     if (farq < 0) {
-        if (kunlarEl) kunlarEl.textContent = "00";
-        if (soatlarEl) soatlarEl.textContent = "00";
-        if (daqiqalarEl) daqiqalarEl.textContent = "00";
-        if (soniyalarEl) soniyalarEl.textContent = "00";
+        document.getElementById('kunlar').textContent = '00';
+        document.getElementById('soatlar').textContent = '00';
+        document.getElementById('daqiqalar').textContent = '00';
+        document.getElementById('soniyalar').textContent = '00';
         return;
     }
 
@@ -25,334 +20,210 @@ function taymerniYangilash() {
     const daqiqalar = Math.floor((farq % (1000 * 60 * 60)) / (1000 * 60));
     const soniyalar = Math.floor((farq % (1000 * 60)) / 1000);
 
-    if (kunlarEl) kunlarEl.textContent = String(kunlar).padStart(2, '0');
-    if (soatlarEl) soatlarEl.textContent = String(soatlar).padStart(2, '0');
-    if (daqiqalarEl) daqiqalarEl.textContent = String(daqiqalar).padStart(2, '0');
-    if (soniyalarEl) soniyalarEl.textContent = String(soniyalar).padStart(2, '0');
-
+    document.getElementById('kunlar').textContent = String(kunlar).padStart(2, '0');
+    document.getElementById('soatlar').textContent = String(soatlar).padStart(2, '0');
+    document.getElementById('daqiqalar').textContent = String(daqiqalar).padStart(2, '0');
+    document.getElementById('soniyalar').textContent = String(soniyalar).padStart(2, '0');
 }
 
-taymerniYangilash();
-setInterval(taymerniYangilash, 1000);
+taymerYangilash();
+setInterval(taymerYangilash, 1000);
 
 
-/* ========== FAQ — Savol-javob ochilishi ========== */
+// ========== FAQ AKKORDION ==========
 
 const faqItems = document.querySelectorAll('.faq-item');
 
-faqItems.forEach(function (item) {
-
+faqItems.forEach(item => {
     const savol = item.querySelector('.faq-savol');
-
-    if (savol) {
-
-        savol.addEventListener('click', function () {
-
-            const isActive = item.classList.contains('faol');
-
-            // Avval hammasini yopish
-            faqItems.forEach(function (boshqa) {
-                boshqa.classList.remove('faol');
-            });
-
-            // Agar yopiq bo'lsa — ochish
-            if (!isActive) {
-                item.classList.add('faol');
-            }
-
-        });
-
-    }
-
+    
+    savol.addEventListener('click', () => {
+        const faolMi = item.classList.contains('faol');
+        
+        // Boshqalarni yopish
+        faqItems.forEach(i => i.classList.remove('faol'));
+        
+        // Agar bu yopiq bo'lsa, ochish
+        if (!faolMi) {
+            item.classList.add('faol');
+        }
+    });
 });
 
 
-/* ========== LEAD FORMA ========== */
+// ========== SMOOTH SCROLL ==========
 
-const leadForma = document.getElementById("leadForma");
-
-if (leadForma) {
-
-    leadForma.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const ism = document.getElementById("ism").value.trim();
-        const tel = document.getElementById("tel").value.trim();
-        const email = document.getElementById("email").value.trim();
-
-        if (ism === "") {
-            alert("⚠️ Илтимос, исмингизни киритинг!");
-            document.getElementById("ism").focus();
-            return;
-        }
-
-        if (tel === "") {
-            alert("⚠️ Илтимос, телефон рақамингизни киритинг!");
-            document.getElementById("tel").focus();
-            return;
-        }
-
-        if (tel.length < 9) {
-            alert("⚠️ Телефон рақамингиз тўлиқ эмас!");
-            document.getElementById("tel").focus();
-            return;
-        }
-
-        alert(
-            "✅ Раҳмат, " + ism + "!\n\n" +
-            "Сизнинг сўровингиз қабул қилинди.\n" +
-            "Тез орада сиз билан боғланамиз.\n\n" +
-            "🌿 Космик Шифо Академияси"
-        );
-
-        console.log("📩 Янги ариза:");
-        console.log("   Исм:", ism);
-        console.log("   Телефон:", tel);
-        console.log("   Email:", email || "(киритилмаган)");
-
-        leadForma.reset();
-
-    });
-
-}
-
-
-/* ========== SMOOTH SCROLL ========== */
-
-const ankerLinklar = document.querySelectorAll('a[href^="#"]');
-
-ankerLinklar.forEach(function (link) {
-
-    link.addEventListener("click", function (e) {
-
-        const targetId = link.getAttribute("href");
-        if (targetId === "#") return;
-
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
         const target = document.querySelector(targetId);
-
         if (target) {
             e.preventDefault();
             target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+                behavior: 'smooth',
+                block: 'start'
             });
         }
-
     });
-
 });
 
 
-/* ========== SCROLL ANIMATSIYA ========== */
-
-const animatsionElementlar = document.querySelectorAll(
-    ".dastur-karta, .shart-karta, .natija-item, .narx-karta, .taymer-katak, .sharh-karta, .bonus-karta, .kun-karta, .faq-item"
-);
-
-const kuzatuvchi = new IntersectionObserver(function (entries) {
-
-    entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-            kuzatuvchi.unobserve(entry.target);
-        }
-
-    });
-
-}, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-});
-
-animatsionElementlar.forEach(function (el, index) {
-
-    el.style.opacity = "0";
-    el.style.transform = "translateY(40px)";
-    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-    el.style.transitionDelay = (index % 4 * 0.1) + "s";
-
-    kuzatuvchi.observe(el);
-
-});
-
-
-/* ========== SCROLL PROGRESS BAR ========== */
+// ========== SCROLL PROGRESS BAR ==========
 
 const progressBar = document.createElement('div');
 progressBar.className = 'scroll-progress';
 document.body.appendChild(progressBar);
 
-window.addEventListener('scroll', function () {
-    const totalHeight = document.body.scrollHeight - window.innerHeight;
-    const scrolled = (window.scrollY / totalHeight) * 100;
-    progressBar.style.width = scrolled + '%';
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollFoiz = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollFoiz + '%';
 });
 
 
-/* ========== TEPAGA QAYTISH TUGMASI ========== */
+// ========== INTERSECTION OBSERVER (SCROLL ANIMATIONS) ==========
 
-const tepagaTugma = document.createElement('button');
-tepagaTugma.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
-tepagaTugma.className = 'tepaga-tugma';
-tepagaTugma.style.cssText = `
-    position:fixed;
-    bottom:30px;
-    right:30px;
-    width:50px;
-    height:50px;
-    background:#C9A961;
-    color:#FFFFFF;
-    border:none;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:18px;
-    box-shadow:0 5px 20px rgba(201,169,97,0.4);
-    opacity:0;
-    visibility:hidden;
-    transition:0.3s;
-    z-index:100;
-`;
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-document.body.appendChild(tepagaTugma);
-
-window.addEventListener('scroll', function () {
-    if (window.scrollY > 500) {
-        tepagaTugma.style.opacity = '1';
-        tepagaTugma.style.visibility = 'visible';
-    } else {
-        tepagaTugma.style.opacity = '0';
-        tepagaTugma.style.visibility = 'hidden';
-    }
-});
-
-tepagaTugma.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-tepagaTugma.addEventListener('mouseenter', function () {
-    tepagaTugma.style.background = '#A88845';
-    tepagaTugma.style.transform = 'translateY(-3px)';
-});
-
-tepagaTugma.addEventListener('mouseleave', function () {
-    tepagaTugma.style.background = '#C9A961';
-    tepagaTugma.style.transform = 'translateY(0)';
-});
-
-
-/* ========== TELEFON FORMATI ========== */
-
-const telInput = document.getElementById('tel');
-
-if (telInput) {
-
-    telInput.addEventListener('input', function (e) {
-
-        let value = e.target.value.replace(/\D/g, '');
-
-        if (value.startsWith('998')) {
-            value = '+' + value;
-        } else if (value.length > 0 && !value.startsWith('+')) {
-            if (value.length <= 9) {
-                value = '+998' + value;
-            }
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
         }
-
-        if (value.length > 4) {
-            let formatted = value.slice(0, 4);
-            if (value.length > 4) formatted += ' ' + value.slice(4, 6);
-            if (value.length > 6) formatted += ' ' + value.slice(6, 9);
-            if (value.length > 9) formatted += ' ' + value.slice(9, 11);
-            if (value.length > 11) formatted += ' ' + value.slice(11, 13);
-            e.target.value = formatted;
-        } else {
-            e.target.value = value;
-        }
-
     });
+}, observerOptions);
 
+// Kuzatiladigan elementlar
+const animElements = document.querySelectorAll(
+    '.shart-karta, .dastur-karta, .kun-karta, .natija-item, .sharh-karta, .bonus-karta, .faq-item, .taymer-katak'
+);
+
+animElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(40px)';
+    el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+    observer.observe(el);
+});
+
+
+// ========== LEAD FORMA ==========
+
+const leadForma = document.getElementById('leadForma');
+
+if (leadForma) {
+    leadForma.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const ism = document.getElementById('ism').value.trim();
+        const tel = document.getElementById('tel').value.trim();
+        const email = document.getElementById('email').value.trim();
+        
+        // Tekshirish
+        if (ism.length < 2) {
+            alert('⚠️ Iltimos, ismingizni to\'liq kiriting!');
+            return;
+        }
+        
+        if (tel.length < 9) {
+            alert('⚠️ Iltimos, to\'g\'ri telefon raqam kiriting!');
+            return;
+        }
+        
+        // WhatsApp ga yuborish
+        const xabar = `Assalomu alaykum! Men retritga yozilmoqchiman.%0A%0A👤 Ism: ${ism}%0A📞 Tel: ${tel}%0A📧 Email: ${email || 'yo\'q'}`;
+        const whatsappUrl = `https://wa.me/998333215577?text=${xabar}`;
+        
+        // Muvaffaqiyat xabari
+        alert('✅ Rahmat! Sizning ma\'lumotlaringiz qabul qilindi.\n\nWhatsApp orqali siz bilan tez orada bog\'lanamiz.');
+        
+        // WhatsApp ochish
+        window.open(whatsappUrl, '_blank');
+        
+        // Forma tozalash
+        leadForma.reset();
+    });
 }
 
 
-/* ========== STATISTIKA RAQAM SAYANISH ========== */
+// ========== TELEFON FORMAT ==========
+
+const telInput = document.getElementById('tel');
+if (telInput) {
+    telInput.addEventListener('input', function(e) {
+        let qiymat = e.target.value.replace(/\D/g, '');
+        
+        if (qiymat.startsWith('998')) {
+            qiymat = qiymat.substring(3);
+        }
+        
+        let format = '';
+        if (qiymat.length > 0) format = '+998 ';
+        if (qiymat.length > 0) format += qiymat.substring(0, 2);
+        if (qiymat.length > 2) format += ' ' + qiymat.substring(2, 5);
+        if (qiymat.length > 5) format += ' ' + qiymat.substring(5, 7);
+        if (qiymat.length > 7) format += ' ' + qiymat.substring(7, 9);
+        
+        e.target.value = format;
+    });
+}
+
+
+// ========== STAT RAQAMLAR COUNT-UP ==========
 
 const statRaqamlar = document.querySelectorAll('.stat-raqam');
 
-const statKuzatuvchi = new IntersectionObserver(function (entries) {
-
-    entries.forEach(function (entry) {
-
+const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
-
             const el = entry.target;
             const matn = el.textContent;
-            const hadafRaqam = parseInt(matn.replace(/\D/g, ''));
-            const qoshimcha = matn.replace(/[0-9]/g, '');
-
-            let hozir = 0;
-            const oraliq = Math.ceil(hadafRaqam / 50);
-            const tezlik = 30;
-
-            const timer = setInterval(function () {
-
-                hozir += oraliq;
-
-                if (hozir >= hadafRaqam) {
-                    el.textContent = hadafRaqam + qoshimcha;
-                    clearInterval(timer);
-                } else {
+            const raqam = parseInt(matn.replace(/\D/g, ''));
+            const qoshimcha = matn.replace(/\d/g, '');
+            
+            if (!isNaN(raqam) && raqam > 0) {
+                let hozir = 0;
+                const qadam = Math.ceil(raqam / 50);
+                const interval = setInterval(() => {
+                    hozir += qadam;
+                    if (hozir >= raqam) {
+                        hozir = raqam;
+                        clearInterval(interval);
+                    }
                     el.textContent = hozir + qoshimcha;
-                }
-
-            }, tezlik);
-
-            statKuzatuvchi.unobserve(el);
-
+                }, 30);
+            }
+            
+            statObserver.unobserve(el);
         }
-
     });
-
 }, { threshold: 0.5 });
 
-statRaqamlar.forEach(function (el) {
-    statKuzatuvchi.observe(el);
-});
+statRaqamlar.forEach(el => statObserver.observe(el));
 
 
-/* ========== HERO RASM PARALLAX ========== */
+// ========== HERO RASM PARALLAX ==========
 
-const heroRasm = document.querySelector('.hero-rasm');
+const heroRasm = document.querySelector('.hero-rasm-konteyner');
 
 if (heroRasm) {
-
-    window.addEventListener('scroll', function () {
-
+    window.addEventListener('scroll', () => {
         const scrolled = window.scrollY;
-
-        // Faqat hero balandligi ichida
-        if (scrolled < window.innerHeight) {
-            const harakat = scrolled * 0.3;
-            heroRasm.style.transform = `translateY(${harakat}px)`;
+        if (scrolled < 800) {
+            heroRasm.style.transform = `translateY(${scrolled * 0.1}px)`;
         }
-
     });
-
 }
 
 
-/* ========== KONSOL XABAR ========== */
+// ========== KONSOL XABARI ==========
 
-console.log("%c🌿 КОСМИК ШИФО АКАДЕМИЯСИ", 
-    "color:#C9A961; font-size:20px; font-weight:bold;");
-console.log("%cЎЗЛИККА ҚАЙТИШ — Грузия Ретрити", 
-    "color:#3D2817; font-size:14px;");
-console.log("%c18 — 28 ИЮЛЬ 2026", 
-    "color:#6B5D4F; font-size:12px;");
-console.log("%cЖойлар чекланган!", 
-    "color:#C9A961; font-size:12px; font-style:italic;");
+console.log('%c✨ КОСМИК ШИФО АКАДЕМИЯСИ ✨', 'color: #C9A961; font-size: 24px; font-weight: bold; font-family: serif;');
+console.log('%c🌟 Ўзликка қайтиш ретрити - 2026 🌟', 'color: #A88845; font-size: 16px; font-style: italic;');
+console.log('%c💛 Сайт яратилди билан муҳаббат 💛', 'color: #D4B873; font-size: 14px;');
