@@ -402,3 +402,50 @@ tilTugma.addEventListener('click', () => {
 
 
     // ========== HERO RASM PARALLAX ==========
+
+
+
+    // ========== GALEREYA LIGHTBOX ==========
+
+    const galereyaKartalar = document.querySelectorAll('.galereya-karta');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxRasm = document.getElementById('lightboxRasm');
+    const lightboxYopish = document.getElementById('lightboxYopish');
+
+    if (galereyaKartalar.length > 0 && lightbox) {
+        galereyaKartalar.forEach(karta => {
+            karta.addEventListener('click', () => {
+                const rasmUrl = karta.getAttribute('data-rasm');
+                lightboxRasm.src = rasmUrl;
+                lightbox.classList.add('faol');
+                document.body.style.overflow = 'hidden'; // Scroll to'xtatish
+            });
+        });
+
+        // Yopish — X tugmasi
+        if (lightboxYopish) {
+            lightboxYopish.addEventListener('click', () => {
+                lightbox.classList.remove('faol');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Yopish — fonni bosish
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('faol');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Yopish — ESC tugmasi
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('faol')) {
+                lightbox.classList.remove('faol');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+
+    // ========== KONSOL ==========
