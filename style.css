@@ -3301,3 +3301,35 @@ body.tungi .sharh-belgi {
     color: var(--yorqin-oltin) !important;
     opacity: 0.5;
 }
+
+/* ========== MASTER YUTUQLAR — 5 ta element uchun moslashtirish ========== */
+
+.master-yutuqlar li {
+    padding: 11px 0;
+    font-size: 14.5px;
+}
+
+.master-yutuqlar li i {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+}
+
+/* Yangi ikonalar uchun rangli aksent */
+
+.master-yutuqlar li i.fa-graduation-cap,
+.master-yutuqlar li i.fa-id-badge,
+.master-yutuqlar li i.fa-dna,
+.master-yutuqlar li i.fa-coins {
+    color: var(--oltin);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 100, 0.4));
+}
+
+/* Tungi rejimda */
+
+body.tungi .master-yutuqlar li i.fa-graduation-cap,
+body.tungi .master-yutuqlar li i.fa-id-badge,
+body.tungi .master-yutuqlar li i.fa-dna,
+body.tungi .master-yutuqlar li i.fa-coins {
+    color: var(--yorqin-oltin) !important;
+}
