@@ -97,8 +97,50 @@
         </div>
     </section>
 
-    <!-- TAVSIF -->
-    <section class="tavsif">
+    <!-- TAVSIF BATUMI -->
+      
+    <section class="manzil-batumi">
+  <div class="manzil-batumi__bg" style="background-image:url('rasmlar/batumi.jpg')"></div>
+  <div class="manzil-batumi__veil"></div>
+  <div class="manzil-batumi__inner">
+    <span class="manzil-batumi__eyebrow">Саёҳат манзили</span>
+    <h2 class="manzil-batumi__title">Батуми</h2>
+    <span class="manzil-batumi__divider"></span>
+    <p class="manzil-batumi__sub">Қора денгиз қирғоғи — сафарнинг бошланиши</p>
+  </div>
+</section>
+
+<style>
+/* Шрифтни <head> га қўшинг (агар ҳали йўқ бўлса):
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap&subset=cyrillic" rel="stylesheet"> */
+.manzil-batumi{position:relative;overflow:hidden;min-height:clamp(420px,58vw,620px);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:clamp(48px,8vw,90px) clamp(20px,5vw,40px);isolation:isolate;
+  font-family:'Manrope',system-ui,sans-serif}
+.manzil-batumi *{box-sizing:border-box}
+.manzil-batumi__bg{position:absolute;inset:0;background-size:cover;background-position:center;
+  transform:scale(1.05);transition:transform 1.4s cubic-bezier(.2,.7,.2,1);z-index:-2}
+.manzil-batumi:hover .manzil-batumi__bg{transform:scale(1.11)}
+.manzil-batumi__veil{position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(120% 100% at 50% 50%,rgba(18,14,9,.18),rgba(18,14,9,.62) 100%),
+             linear-gradient(180deg,rgba(18,14,9,.3),rgba(18,14,9,.34))}
+.manzil-batumi__inner{max-width:680px}
+.manzil-batumi__eyebrow{display:block;font-size:.78rem;letter-spacing:.42em;text-transform:uppercase;
+  color:#E9CF8E;font-weight:600;margin-bottom:20px;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.manzil-batumi__title{font-family:'Playfair Display',serif;font-weight:600;
+  font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.04;letter-spacing:.05em;text-transform:uppercase;
+  color:#FBF7EE;margin:0;text-shadow:0 3px 26px rgba(0,0,0,.5)}
+.manzil-batumi__divider{display:block;width:92px;height:2px;margin:26px auto 0;border-radius:2px;
+  background:linear-gradient(90deg,transparent,#D9B96A 30%,#F0DAA0 50%,#D9B96A 70%,transparent);
+  box-shadow:0 0 18px rgba(217,185,106,.5)}
+.manzil-batumi__sub{margin:26px auto 0;max-width:520px;color:rgba(251,247,238,.9);
+  font-size:clamp(1rem,1.6vw,1.14rem);line-height:1.65;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+@media(prefers-reduced-motion:reduce){
+  .manzil-batumi__bg,.manzil-batumi:hover .manzil-batumi__bg{transition:none;transform:scale(1.05)}
+}
+</style>
+
+    <!-- <section class="tavsif">
         <div class="container">
             <p class="kichik-yozuv">Биз ҳақимизда</p>
             <h2 class="bolim-sarlavha">РЕТРИТ ҲАҚИДА</h2>
@@ -111,7 +153,7 @@
                 Ҳар бир кун — янги тажриба, янги ўзлик кашфиёти.
             </p>
         </div>
-    </section>
+    </section> -->
 
     <!-- KIMLAR UCHUN -->
     <section class="kimlar-uchun">
@@ -151,38 +193,41 @@
             <div class="dastur-grid">
                 <div class="dastur-karta">
                     <span class="raqam">01</span>
-                    <h3>ЖОНЛИ ДАРСЛАР</h3>
-                    <p>Анадо EXales билан жонли муҳитда чуқур ишлаш</p>
+                    <h3> Анадо EXales билан жонли дарслар</h3>
+                    <p>Профессионал Қалбшунос-Мастер Анадо EXales билан 5 соатлик жонли дарслар.
+
+Мастернинг юқори энергия майдонида бўлиш ва ўзингиз билан чуқур ишлаш имконияти.</p>
                 </div>
                 <div class="dastur-karta">
                     <span class="raqam">02</span>
                     <h3>Аждод дастурлари билан ишлаш</h3>
-                    <p>Аждодан-аждодга ўтиб келаётган   такрорланувчи сценарийлар билан ишлаш имконияти.</p>
+                    <p>Аждоддан-Аждодга ўтиб келаётган ички дастурлар, муносабатлар ва такрорланувчи сценарийлар билан ишлаш имконияти.</p>
                 </div>
                 <div class="dastur-karta">
                     <span class="raqam">03</span>
-                    <h3>МЕДИТАЦИЯ</h3>
-                    <p>Турли медитация техникалари билан танишиш</p>
+                    <h3>Онгни кенгайтириш</h3>
+                    <p>Мастернинг жонли энергиялари орқали онг кенгаяди ва ҳаётингизнинг турли йўналишларидаги ривожланиш жараёнлари тезлашади.</p>
                 </div>
                 <div class="dastur-karta">
                     <span class="raqam">04</span>
-                    <h3>ТРАНСФОРМАЦИЯ</h3>
-                    <p>Ички ўзгариш учун амалий машғулотлар</p>
+                    <h3>Бетакрор табиат</h3>
+                    <p>Мовий денгиз, сарвқомат тоғлар ва яшил табиат қўйнида дам олиш ва янгиланиш.</p>
                 </div>
                 <div class="dastur-karta">
                     <span class="raqam">05</span>
-                    <h3>ЭНЕРГЕТИКА</h3>
-                    <p>Энергия мувозанатини ўрнатиш сирлари</p>
+                    <h3>Шарқона маданият ва осойишталик</h3>
+                    <p>Батуми ва Тбилиси шаҳарларининг ўзига хос муҳити, миллий таомлари ва меҳмондўстлиги.</p>
                 </div>
                 <div class="dastur-karta">
                     <span class="raqam">06</span>
-                    <h3>ҚАЛБ САЁҲАТИ</h3>
-                    <p>Ўз қалбига чуқур саёҳат қилиш</p>
+                    <h3>Муқаддас жойлар ва ички саёҳат</h3>
+                    <p>Медитациялар, инициациялар, сукут амалиётлари ва энергияни тозаловчи машқлар орқали ички мувозанатни тиклаш.
+</p>
                 </div>
                 <div class="dastur-karta">
                     <span class="raqam">07</span>
-                    <h3>ИНТЕГРАЦИЯ</h3>
-                    <p>Олинган билимларни кундалик ҳаётга татбиқ этиш</p>
+                    <h3> Юлдузлар остидаги кечалар</h3>
+                    <p>Денгиз шовқини, юлдузлар жилваси ва руҳни енгиллаштирувчи кечки амалиётлар.</p>
                 </div>
             </div>
         </div>
@@ -191,7 +236,6 @@
     <!-- MASTER -->
     <section class="master-bolim" id="master">
         <div class="container">
-            <p class="kichik-yozuv">Сизнинг устозингиз</p>
             <h2 class="bolim-sarlavha">МАСТЕР ҲАҚИДА</h2>
             <div class="oltin-chiziq"></div>
 
@@ -392,7 +436,46 @@
 
     <!-- NATIJALAR -->
     <section class="natijalar">
-        <div class="container">
+
+        <section class="manzil-tbilisi">
+  <div class="manzil-tbilisi__bg" style="background-image:url('rasmlar/tbilisi.jpg')"></div>
+  <div class="manzil-tbilisi__veil"></div>
+  <div class="manzil-tbilisi__inner">
+    <span class="manzil-tbilisi__eyebrow">Саёҳат манзили</span>
+    <h2 class="manzil-tbilisi__title">Тбилиси</h2>
+    <span class="manzil-tbilisi__divider"></span>
+    <p class="manzil-tbilisi__sub">Қадимий пойтахт — сафарнинг якуни</p>
+  </div>
+</section>
+
+<style>
+.manzil-tbilisi{position:relative;overflow:hidden;min-height:clamp(420px,58vw,620px);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:clamp(48px,8vw,90px) clamp(20px,5vw,40px);isolation:isolate;
+  font-family:'Manrope',system-ui,sans-serif}
+.manzil-tbilisi *{box-sizing:border-box}
+.manzil-tbilisi__bg{position:absolute;inset:0;background-size:cover;background-position:center;
+  transform:scale(1.05);transition:transform 1.4s cubic-bezier(.2,.7,.2,1);z-index:-2}
+.manzil-tbilisi:hover .manzil-tbilisi__bg{transform:scale(1.11)}
+.manzil-tbilisi__veil{position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(120% 100% at 50% 50%,rgba(18,14,9,.18),rgba(18,14,9,.62) 100%),
+             linear-gradient(180deg,rgba(18,14,9,.3),rgba(18,14,9,.34))}
+.manzil-tbilisi__inner{max-width:680px}
+.manzil-tbilisi__eyebrow{display:block;font-size:.78rem;letter-spacing:.42em;text-transform:uppercase;
+  color:#E9CF8E;font-weight:600;margin-bottom:20px;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.manzil-tbilisi__title{font-family:'Playfair Display',serif;font-weight:600;
+  font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.04;letter-spacing:.05em;text-transform:uppercase;
+  color:#FBF7EE;margin:0;text-shadow:0 3px 26px rgba(0,0,0,.5)}
+.manzil-tbilisi__divider{display:block;width:92px;height:2px;margin:26px auto 0;border-radius:2px;
+  background:linear-gradient(90deg,transparent,#D9B96A 30%,#F0DAA0 50%,#D9B96A 70%,transparent);
+  box-shadow:0 0 18px rgba(217,185,106,.5)}
+.manzil-tbilisi__sub{margin:26px auto 0;max-width:520px;color:rgba(251,247,238,.9);
+  font-size:clamp(1rem,1.6vw,1.14rem);line-height:1.65;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+@media(prefers-reduced-motion:reduce){
+  .manzil-tbilisi__bg,.manzil-tbilisi:hover .manzil-tbilisi__bg{transition:none;transform:scale(1.05)}
+}
+</style>
+        <!-- <div class="container">
             <p class="kichik-yozuv">Натижалар</p>
             <h2 class="bolim-sarlavha">НИМАГА ЭРИШАСИЗ?</h2>
             <div class="oltin-chiziq"></div>
@@ -427,7 +510,7 @@
                     <p>Сертификат</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- SHARHLAR
