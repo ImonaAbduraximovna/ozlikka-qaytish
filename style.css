@@ -3625,12 +3625,12 @@ body.tungi .master-yutuqlar li i.fa-coins {
 
 /* ========== GRUZIYA TABIATI — ORQA FON RASMLARI ========== */
 
-/* 🏔️ 1-RASM: TAVSIF bo'limi — Gruziya tog'lari */
+/* 🏔️ 1-RASM: TAVSIF — Gruziya tog'lari */
 
 .tavsif {
     background-image: 
-        linear-gradient(135deg, rgba(255, 252, 245, 0.85) 0%, rgba(220, 230, 232, 0.82) 100%),
-        url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1920&q=80') !important;
+        linear-gradient(135deg, rgba(255, 252, 245, 0.78) 0%, rgba(220, 230, 232, 0.75) 100%),
+        url('https://images.pexels.com/photos/2406731/pexels-photo-2406731.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed !important;
@@ -3656,12 +3656,12 @@ body.tungi .master-yutuqlar li i.fa-coins {
 }
 
 
-/* 🌊 2-RASM: MASTER bo'limi — Batumi dengiz */
+/* 🌊 2-RASM: MASTER — Gruziya yashilliklari */
 
 .master-bolim {
     background-image: 
-        linear-gradient(135deg, rgba(255, 252, 245, 0.87) 0%, rgba(245, 232, 199, 0.83) 100%),
-        url('https://images.unsplash.com/photo-1597018434656-bd6b7eb6c8c2?w=1920&q=80') !important;
+        linear-gradient(135deg, rgba(255, 252, 245, 0.82) 0%, rgba(245, 232, 199, 0.78) 100%),
+        url('https://images.pexels.com/photos/4198365/pexels-photo-4198365.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed !important;
@@ -3676,7 +3676,7 @@ body.tungi .master-yutuqlar li i.fa-coins {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at 30% 40%, rgba(255, 215, 100, 0.25) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 30% 40%, rgba(255, 215, 100, 0.22) 0%, transparent 60%);
     pointer-events: none;
     z-index: 0;
 }
@@ -3687,12 +3687,12 @@ body.tungi .master-yutuqlar li i.fa-coins {
 }
 
 
-/* 🌅 3-RASM: FORMA bo'limi — Gruziya quyosh botishi */
+/* 🌅 3-RASM: FORMA — Gruziya quyosh botishi */
 
 .forma {
     background-image: 
-        linear-gradient(135deg, rgba(44, 74, 82, 0.88) 0%, rgba(15, 30, 60, 0.82) 100%),
-        url('https://images.unsplash.com/photo-1604159854815-e21b8e1eb2c4?w=1920&q=80') !important;
+        linear-gradient(135deg, rgba(15, 30, 60, 0.85) 0%, rgba(8, 18, 30, 0.8) 100%),
+        url('https://images.pexels.com/photos/2901481/pexels-photo-2901481.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed !important;
@@ -3708,7 +3708,7 @@ body.tungi .master-yutuqlar li i.fa-coins {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at center, rgba(255, 215, 100, 0.22) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(255, 215, 100, 0.2) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
 }
@@ -3717,6 +3717,7 @@ body.tungi .master-yutuqlar li i.fa-coins {
     position: relative;
     z-index: 1;
 }
+
 
 /* ========== TELEFON UCHUN ========== */
 
@@ -3728,22 +3729,23 @@ body.tungi .master-yutuqlar li i.fa-coins {
     }
 }
 
+
 /* ========== TUNGI REJIM ========== */
 
 body.tungi .tavsif {
     background-image: 
-        linear-gradient(135deg, rgba(10, 22, 40, 0.9) 0%, rgba(13, 27, 46, 0.86) 100%),
-        url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1920&q=80') !important;
+        linear-gradient(135deg, rgba(10, 22, 40, 0.88) 0%, rgba(13, 27, 46, 0.85) 100%),
+        url('https://images.pexels.com/photos/2406731/pexels-photo-2406731.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
 }
 
 body.tungi .master-bolim {
     background-image: 
-        linear-gradient(135deg, rgba(10, 22, 40, 0.9) 0%, rgba(20, 40, 71, 0.86) 100%),
-        url('https://images.unsplash.com/photo-1597018434656-bd6b7eb6c8c2?w=1920&q=80') !important;
+        linear-gradient(135deg, rgba(10, 22, 40, 0.88) 0%, rgba(20, 40, 71, 0.85) 100%),
+        url('https://images.pexels.com/photos/4198365/pexels-photo-4198365.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
 }
 
 body.tungi .forma {
     background-image: 
         linear-gradient(135deg, rgba(8, 18, 30, 0.92) 0%, rgba(13, 27, 46, 0.88) 100%),
-        url('https://images.unsplash.com/photo-1604159854815-e21b8e1eb2c4?w=1920&q=80') !important;
+        url('https://images.pexels.com/photos/2901481/pexels-photo-2901481.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
 }
