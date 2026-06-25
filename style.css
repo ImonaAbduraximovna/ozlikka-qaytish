@@ -2166,30 +2166,42 @@ footer {
 
 .boshqaruv-tugmalari {
     position: fixed;
-    top: 25px;
+    bottom: 25px;
     left: 25px;
     z-index: 1000;
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.boshqaruv-tugmalari:hover {
+    opacity: 1;
 }
 
 .rejim-tugma,
 .til-tugma {
-    width: 45px;
-    height: 45px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     border: 2px solid var(--oltin);
-    background: var(--oq);
+    background: rgba(255, 255, 255, 0.9);
     color: var(--oltin);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     font-family: 'Jost', sans-serif;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 5px 20px rgba(201, 169, 97, 0.3), 0 0 20px rgba(255, 215, 100, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.til-tugma {
+    font-size: 11px;
+    letter-spacing: 0.5px;
 }
 
 .rejim-tugma:hover,
@@ -2624,17 +2636,17 @@ body.tungi .sertifikat strong {
 /* Mobil */
 
 @media (max-width: 600px) {
-    .boshqaruv-tugmalari {
-        top: 15px;
+   .boshqaruv-tugmalari {
+        bottom: 15px;
         left: 15px;
-        gap: 8px;
+        gap: 6px;
     }
     
     .rejim-tugma,
     .til-tugma {
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
+        width: 32px;
+        height: 32px;
+        font-size: 11px;
     }
 }
 /* ========== TEPAGA QAYTISH TUGMASI ========== */
@@ -3218,10 +3230,10 @@ body.tungi .hero-rasm-konteyner {
 
 body.tungi .boshqaruv-tugmalari .rejim-tugma,
 body.tungi .boshqaruv-tugmalari .til-tugma {
-    background: linear-gradient(135deg, #C9A961 0%, #D4B873 50%, #A88845 100%) !important;
-    border-color: var(--yorqin-oltin) !important;
-    color: #FFFFFF !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 100, 0.4) !important;
+    background: rgba(20, 40, 71, 0.85) !important;
+    border-color: rgba(201, 169, 97, 0.5) !important;
+    color: var(--yorqin-oltin) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.tungi .tepaga-qaytish {
